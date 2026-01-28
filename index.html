@@ -22,7 +22,7 @@
             line-height: 1.6;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
         }
         header {
@@ -78,10 +78,10 @@
             background-color: #e0f2fe;
             color: #0369a1;
         }
-        .tag.research {
-            background-color: #f3e8ff;
-            color: #7e22ce;
-        }
+        .tag.research { background-color: #f3e8ff; color: #7e22ce; }
+        .tag.tool { background-color: #dcfce7; color: #15803d; }
+        .tag.society { background-color: #fee2e2; color: #b91c1c; }
+        
         .news-title {
             font-size: 1.25rem;
             font-weight: 700;
@@ -92,6 +92,7 @@
             margin-bottom: 20px;
             color: var(--text-secondary);
             flex-grow: 1;
+            font-size: 0.95rem;
         }
         .news-footer {
             margin-top: auto;
@@ -127,14 +128,10 @@
             .news-card {
                 border-color: rgba(255,255,255,0.1);
             }
-            .tag {
-                background-color: #172554;
-                color: #60a5fa;
-            }
-            .tag.research {
-                background-color: #3b0764;
-                color: #c084fc;
-            }
+            .tag { background-color: #172554; color: #60a5fa; }
+            .tag.research { background-color: #3b0764; color: #c084fc; }
+            .tag.tool { background-color: #052e16; color: #4ade80; }
+            .tag.society { background-color: #450a0a; color: #f87171; }
         }
     </style>
 </head>
@@ -142,53 +139,185 @@
     <div class="container">
         <header>
             <h1>AI Pulse</h1>
-            <div class="date" id="current-date">January 20, 2025</div>
+            <div class="date">January 27, 2026</div>
         </header>
 
-        <h2 class="section-title">Latest Headlines</h2>
-        <div class="news-grid" id="news-container">
+        <!-- Business Section -->
+        <h2 class="section-title">Business & Industry</h2>
+        <div class="news-grid">
             <article class="news-card">
                 <div><span class="tag">Business</span></div>
-                <h3 class="news-title">C3.AI in Talks to Merge with Automation Anywhere</h3>
-                <p class="news-summary">Enterprise AI software provider C3.AI is reportedly in discussions to merge with startup Automation Anywhere, signaling further consolidation in the enterprise AI market.</p>
+                <h3 class="news-title">DeepSeek R1 Shocks the Global AI Market</h3>
+                <p class="news-summary">China's new reasoning model, DeepSeek R1, has demonstrated surprising capabilities, challenging US dominance and sparking discussions about the rapid commoditization of intelligence.</p>
                 <div class="news-footer">
-                    <a href="https://www.reuters.com/technology/artificial-intelligence/" class="news-source">Read on Reuters</a>
+                    <a href="https://www.technologyreview.com/2026/01/05/1130662/whats-next-for-ai-in-2026/" class="news-source">MIT Tech Review</a>
                 </div>
             </article>
             <article class="news-card">
-                <div><span class="tag">Society</span></div>
-                <h3 class="news-title">AI in Education: NYC Teachers Weigh Pros & Cons</h3>
-                <p class="news-summary">NYC educators explore new AI tools for classrooms while debating the ethical concerns and practical challenges of integrating AI into public education.</p>
+                <div><span class="tag">Business</span></div>
+                <h3 class="news-title">Davos 2026: The Shift from Hype to ROI</h3>
+                <p class="news-summary">Global leaders at the World Economic Forum are pivoting their AI focus from speculative hype to concrete Return on Investment (ROI) and pragmatic implementation.</p>
                 <div class="news-footer">
-                    <a href="https://www.nbcnews.com/artificial-intelligence" class="news-source">Read on NBC News</a>
+                    <a href="https://fortune.com/2026/01/20/davos-world-economic-forum-leaders-shift-focus-to-ai-roi/" class="news-source">Fortune</a>
+                </div>
+            </article>
+            <article class="news-card">
+                <div><span class="tag">Business</span></div>
+                <h3 class="news-title">Small Language Models (SLMs) Enter the Enterprise</h3>
+                <p class="news-summary">Fine-tuned small models are becoming staples for mature AI enterprises in 2026, offering cost and performance advantages over massive out-of-the-box LLMs.</p>
+                <div class="news-footer">
+                    <a href="https://techcrunch.com/2026/01/02/in-2026-ai-will-move-from-hype-to-pragmatism/" class="news-source">TechCrunch</a>
+                </div>
+            </article>
+            <article class="news-card">
+                <div><span class="tag">Business</span></div>
+                <h3 class="news-title">Project Stargate: The $500B AI Infrastructure Bet</h3>
+                <p class="news-summary">A massive joint venture involving OpenAI and SoftBank aims to invest $500 billion in domestic infrastructure, signaling the scale of physical compute needs.</p>
+                <div class="news-footer">
+                    <a href="https://www.businessinsider.com/biggest-ai-deals-acquisitions-of-the-year-2025-12" class="news-source">Business Insider</a>
+                </div>
+            </article>
+            <article class="news-card">
+                <div><span class="tag">Business</span></div>
+                <h3 class="news-title">Tech M&A Hits $478B Driven by AI</h3>
+                <p class="news-summary">Mergers and acquisitions in the technology sector have surged by 76%, reaching nearly half a trillion dollars as companies race to consolidate AI capabilities.</p>
+                <div class="news-footer">
+                    <a href="https://valorinternational.globo.com/google/amp/business/news/2026/01/16/ai-should-accelerate-mergers-and-acquisitions-this-year.ghtml" class="news-source">Valor Intl</a>
                 </div>
             </article>
         </div>
 
-        <h2 class="section-title">Trending Research & Techniques</h2>
-        <div class="news-grid" id="research-container">
-             <article class="news-card">
-                <div><span class="tag research">Technique</span></div>
-                <h3 class="news-title">Continuous Audio Language Models (CALM)</h3>
-                <p class="news-summary">A new paradigm for audio generation that addresses the trade-off between fidelity and computational cost by studying continuous audio language models rather than discrete token-based ones.</p>
+        <!-- Research Section -->
+        <h2 class="section-title">Research & Science</h2>
+        <div class="news-grid">
+            <article class="news-card">
+                <div><span class="tag research">Research</span></div>
+                <h3 class="news-title">DeepSeek-R1-Zero: RL Without Supervision</h3>
+                <p class="news-summary">Researchers introduce a model trained via large-scale reinforcement learning without supervised fine-tuning, achieving remarkable reasoning performance.</p>
                 <div class="news-footer">
-                    <a href="https://huggingface.co/papers/trending" class="news-source">Hugging Face Papers</a>
+                    <a href="https://github.com/deepseek-ai/DeepSeek-R1" class="news-source">DeepSeek GitHub</a>
                 </div>
             </article>
             <article class="news-card">
-                <div><span class="tag research">Paper</span></div>
-                <h3 class="news-title">Conditioned Generative Modeling of Molecular Glues</h3>
-                <p class="news-summary">New research proposes a realistic AI approach for synthesizable drug-like molecules, specifically focusing on "molecular glues" which are crucial for targeted protein degradation.</p>
+                <div><span class="tag research">Research</span></div>
+                <h3 class="news-title">Gemini Robotics: Reasoning for Physical Agents</h3>
+                <p class="news-summary">Google DeepMind's new "Gemini Robotics" models enable robots to perceive, reason, and use tools, powering the next generation of Boston Dynamics humanoids.</p>
+                <div class="news-footer">
+                    <a href="https://techcrunch.com/2026/01/05/boston-dynamicss-next-gen-humanoid-robot-will-have-google-deepmind-dna/" class="news-source">TechCrunch</a>
+                </div>
+            </article>
+            <article class="news-card">
+                <div><span class="tag research">Research</span></div>
+                <h3 class="news-title">AlphaEvolve: Evolutionary Algorithms for AI</h3>
+                <p class="news-summary">A new approach from Google DeepMind that uses evolutionary strategies to self-improve model architectures, sparking a wave of open-source replications.</p>
+                <div class="news-footer">
+                    <a href="https://www.technologyreview.com/2026/01/05/1130662/whats-next-for-ai-in-2026/" class="news-source">MIT Tech Review</a>
+                </div>
+            </article>
+            <article class="news-card">
+                <div><span class="tag research">Research</span></div>
+                <h3 class="news-title">Agentic Reasoning Framework</h3>
+                <p class="news-summary">New research from UIUC redefines LLMs as autonomous agents capable of planning and acting in dynamic environments, moving beyond simple text generation.</p>
+                <div class="news-footer">
+                    <a href="https://huggingface.co/papers/trending" class="news-source">Hugging Face</a>
+                </div>
+            </article>
+            <article class="news-card">
+                <div><span class="tag research">Research</span></div>
+                <h3 class="news-title">Conditioned Generative Modeling for Molecules</h3>
+                <p class="news-summary">A breakthrough in synthesizable drug discovery using conditioned generative models, specifically targeting "molecular glues" for protein degradation.</p>
                 <div class="news-footer">
                     <a href="https://arxiv.org/list/cs.AI/recent" class="news-source">ArXiv</a>
                 </div>
             </article>
-             <article class="news-card">
-                <div><span class="tag research">Reinforcement Learning</span></div>
-                <h3 class="news-title">Qwen2.5-Math Improvements under RL</h3>
-                <p class="news-summary">Researchers show that Qwen2.5-Math models can improve significantly under Reinforcement Learning, even when trained with spurious or flawed rewards, demonstrating surprising robustness.</p>
+        </div>
+
+        <!-- Tools Section -->
+        <h2 class="section-title">Open Source & Tools</h2>
+        <div class="news-grid">
+            <article class="news-card">
+                <div><span class="tag tool">Tool</span></div>
+                <h3 class="news-title">OpenEvolve</h3>
+                <p class="news-summary">An open-source implementation of DeepMind's AlphaEvolve, allowing developers to experiment with evolutionary model optimization on consumer hardware.</p>
                 <div class="news-footer">
-                    <a href="https://github.com/dair-ai/ML-Papers-of-the-Week" class="news-source">DAIR.AI GitHub</a>
+                    <a href="https://www.technologyreview.com/2026/01/05/1130662/whats-next-for-ai-in-2026/" class="news-source">GitHub / Tech Review</a>
+                </div>
+            </article>
+            <article class="news-card">
+                <div><span class="tag tool">Tool</span></div>
+                <h3 class="news-title">DeepSeek-V3</h3>
+                <p class="news-summary">The V3 model from DeepSeek is gaining massive traction as a powerful, open-weights alternative to GPT-4, accumulating over 100k stars on GitHub.</p>
+                <div class="news-footer">
+                    <a href="https://github.com/deepseek-ai/DeepSeek-V3" class="news-source">GitHub</a>
+                </div>
+            </article>
+            <article class="news-card">
+                <div><span class="tag tool">Tool</span></div>
+                <h3 class="news-title">SimpleMem</h3>
+                <p class="news-summary">A new tool designed to give AI agents persistent memory, handling the storage and retrieval of context over long interaction sessions.</p>
+                <div class="news-footer">
+                    <a href="https://github.com/aiming-lab/SimpleMem" class="news-source">GitHub</a>
+                </div>
+            </article>
+             <article class="news-card">
+                <div><span class="tag tool">Tool</span></div>
+                <h3 class="news-title">Qwen2.5-Math</h3>
+                <p class="news-summary">Alibaba's specialized math model has released new versions that show significant robustness when trained with reinforcement learning techniques.</p>
+                <div class="news-footer">
+                    <a href="https://github.com/QwenLM/Qwen2.5-Math" class="news-source">GitHub</a>
+                </div>
+            </article>
+            <article class="news-card">
+                <div><span class="tag tool">Tool</span></div>
+                <h3 class="news-title">SinkaEvolve</h3>
+                <p class="news-summary">Sakana AI's specialized version of evolutionary algorithms, optimized for creating smaller, more efficient models inspired by nature.</p>
+                <div class="news-footer">
+                    <a href="https://sakana.ai" class="news-source">Sakana AI</a>
+                </div>
+            </article>
+        </div>
+
+        <!-- Society Section -->
+        <h2 class="section-title">Society, Ethics & Regulation</h2>
+        <div class="news-grid">
+            <article class="news-card">
+                <div><span class="tag society">Society</span></div>
+                <h3 class="news-title">The Economic Risk of AI "Slop"</h3>
+                <p class="news-summary">The Guardian reports on the growing economic downside of low-quality, AI-generated "slop" cluttering the web and reducing trust in digital content.</p>
+                <div class="news-footer">
+                    <a href="https://www.theguardian.com/business/2026/jan/04/ai-reality-growing-economic-risk-2026" class="news-source">The Guardian</a>
+                </div>
+            </article>
+            <article class="news-card">
+                <div><span class="tag society">Society</span></div>
+                <h3 class="news-title">UK Data Act 2025 Relaxes AI Rules</h3>
+                <p class="news-summary">New provisions in the UK’s Data (Use and Access) Act are set to relax data protection rules for automated decision-making (ADM) starting this month.</p>
+                <div class="news-footer">
+                    <a href="https://www.slaughterandmay.com/horizon-scanning/2026/digital/ai-update-for-2026/" class="news-source">Slaughter and May</a>
+                </div>
+            </article>
+            <article class="news-card">
+                <div><span class="tag society">Society</span></div>
+                <h3 class="news-title">2026: The Pivotal Year for AI Copyright</h3>
+                <p class="news-summary">Crucial court hearings involving Anthropic, Google, and artists are scheduled this year, likely defining the boundaries of "fair use" for training data.</p>
+                <div class="news-footer">
+                    <a href="https://www.reuters.com/legal/government/ai-copyright-battles-enter-pivotal-year-us-courts-weigh-fair-use-2026-01-05/" class="news-source">Reuters</a>
+                </div>
+            </article>
+            <article class="news-card">
+                <div><span class="tag society">Society</span></div>
+                <h3 class="news-title">Legal AI: From Tool to Infrastructure</h3>
+                <p class="news-summary">Analysts predict that 2026 marks the transition of AI in the legal sector from an experimental tool to critical "operational infrastructure".</p>
+                <div class="news-footer">
+                    <a href="https://natlawreview.com/article/ten-ai-predictions-2026-what-leading-analysts-say-legal-teams-should-expect" class="news-source">National Law Review</a>
+                </div>
+            </article>
+            <article class="news-card">
+                <div><span class="tag society">Society</span></div>
+                <h3 class="news-title">EU AI Act: Friction in Implementation</h3>
+                <p class="news-summary">As the EU AI Act enters its implementation phase, regulators and companies face challenges in defining the Code of Practice for copyright and general-purpose AI.</p>
+                <div class="news-footer">
+                    <a href="https://www.bruegel.org/analysis/european-union-still-caught-ai-copyright-bind" class="news-source">Bruegel</a>
                 </div>
             </article>
         </div>
@@ -197,10 +326,5 @@
             <p>Curated by Clawdbot for Leon • <a href="https://github.com/du6/leon-ai-news" style="color: inherit;">View Source</a></p>
         </footer>
     </div>
-
-    <script>
-        const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', dateOptions);
-    </script>
 </body>
 </html>
