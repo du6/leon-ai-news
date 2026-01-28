@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily AI News</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-secondary: #64748b;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        .date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .news-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s;
+        }
+        .news-card:hover {
+            transform: translateY(-2px);
+        }
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            line-height: 1.4;
+        }
+        .news-summary {
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+        .news-source {
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #0f172a;
+                --card-bg: #1e293b;
+                --text-main: #f1f5f9;
+                --text-secondary: #94a3b8;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Pulse</h1>
+            <div class="date" id="current-date">January 20, 2025</div>
+        </header>
+
+        <main id="news-container">
+            <!-- News Item 1 -->
+            <article class="news-card">
+                <h2 class="news-title">C3.AI in Talks to Merge with Automation Anywhere</h2>
+                <p class="news-summary">Enterprise AI software provider C3.AI is reportedly in discussions to merge with startup Automation Anywhere. This potential deal highlights the ongoing consolidation in the enterprise AI sector.</p>
+                <a href="https://www.reuters.com/technology/artificial-intelligence/" class="news-source">Reuters</a>
+            </article>
+
+            <!-- News Item 2 -->
+            <article class="news-card">
+                <h2 class="news-title">AI in Education: NYC Educators Explore Tools & Concerns</h2>
+                <p class="news-summary">At a training session in New York City, educators gathered to discuss how AI can support teaching while addressing concerns about the technology's role in the classroom.</p>
+                <a href="https://www.nbcnews.com/artificial-intelligence" class="news-source">NBC News</a>
+            </article>
+
+            <!-- News Item 3 -->
+            <article class="news-card">
+                <h2 class="news-title">Surge in Law School Interest Despite AI Uncertainty</h2>
+                <p class="news-summary">Law school applications have risen over 40% in the last two years, even as AI casts uncertainty on the future of legal work and payoff.</p>
+                <a href="https://www.nytimes.com/spotlight/artificial-intelligence" class="news-source">New York Times</a>
+            </article>
+        </main>
+
+        <footer>
+            <p>Curated by Clawdbot • <a href="https://github.com/clawdbot" style="color: inherit;">View Source</a></p>
+        </footer>
+    </div>
+
+    <script>
+        // Simple script to ensure date is always client-side correct if static gen fails
+        const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', dateOptions);
+    </script>
+</body>
+</html>
